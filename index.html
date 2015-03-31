@@ -1,88 +1,19 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
 	<head>
-		<title>TODO supply a title</title>
+		<title>McPicker Demo - A color picker for small screens.</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
-			.cell {
-				width: 25%;//50px;
-				height: 50px;
-				float: left;
-			}
-			#container {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 98%;
-				height: 98%;
-				background: black;
-				padding: 5px;
-			}
 		</style>
 	</head>
 	<body>
 		<input type="text" id="mcp"/>
-		<script src="jquery-1.11.0.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="mcpicker.js"></script>
 		<script>
-			$(function () {
-				
-				var mcpicker = function(el) {
-				
-					var colors = [
-						"#FFFFFF",//White	
-						"#C0C0C0",//Silver
-						"#808080",//Gray
-						"#000000",//Black
-						"#FF0000",//Red
-						"#800000",//Maroon
-						"#FFFF00",//Yellow
-						"#808000",//Olive
-						"#00FF00",//Lime
-						"#008000",//Green
-						"#00FFFF",//Aqua
-						"#008080",//Teal
-						"#0000FF",//Blue
-						"#000080",//Navy
-						"#FF00FF",//Fuchsia
-						"#800080"//Purple
-					];
-					
-					var mcp_container = 'pcp_mobile_color_picker_container';
-					
-					$(el).after("<div id=\""+mcp_container+"\"></div>");
-					
-					$("#"+mcp_container).css({
-						"position" : "absolute",
-						"top" : "0",
-						"left" : "0",
-						"width" : "98%",
-						"height" : "98%",
-						"background" : "black",
-						"padding" : "5px"
-					});
-					
-					$.each(colors, function(key, value){
-						$('#'+mcp_container).append("<div class='cell' style='background-color:"+value+"'></div>");
-					});
-					$("#"+mcp_container).hide();
-
-					$(el).focus(function(){
-						$("#"+mcp_container).show("slow");
-					});
-					$(".cell").click(function(){
-						$("#"+mcp_container).hide("slow");
-						$(el).val($(this).css('background-color'));
-						$(el).css('background-color',$(this).css('background-color'));
-					});
-				};
-				
-				mcpicker("#mcp");
+			$(function() {
+				$("#mcp").mcpicker();
 			});
 		</script>
 	</body>
