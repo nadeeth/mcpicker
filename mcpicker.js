@@ -44,17 +44,21 @@
 		});
 
 		//Styles
+		var position = $(el).position();
 		$("#"+mcp_container).css({
 			"position" : "absolute",
-			"top" : "0",
-			"left" : "0",
-			"width" : "98%",
-			"height" : "98%",
+			"top" : position.top + $(el).height() + 10,
+			"left" : position.left,
+			//"width" : "100%",
+			//"height" : "100%",
+			"width" : "200px",
+			"height" : "200px",
+			"margin" : "auto",
 			"background" : "black",
 			"padding" : "5px"
 		});
 		$("."+mcp_cell).css({
-			"width" : "25%",//50px;
+			"width" : "50px",
 			"height" : "50px",
 			"float" : "left",
 		});
