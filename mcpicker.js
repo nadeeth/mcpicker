@@ -3,8 +3,9 @@
 	$.fn.mcpicker = function(options) {
 
 		var el = this;//To avoid scope issues
-		options = options ? options : {};
+		options = options ? options : {};//Options
 		
+		//Colors
 		var colors = [
 			"#FFFFFF",//White	
 			"#C0C0C0",//Silver
@@ -24,23 +25,28 @@
 			"#800080"//Purple
 		];
 
+		//Picker elements
 		var mcp_container = 'pcp_mobile_color_picker_container';
 		var mcp_cell = 'pcp_mobile_color_picker_cell';
 
+		//Create the color picker
 		$(el).after("<div id=\""+mcp_container+"\"></div>");
-
 		$.each(colors, function(key, value){
-			$('#'+mcp_container).append("<div class='"+mcp_cell+"' style='background-color:"+value+"'></div>");
+			$('#'+mcp_container).append("<div data-color=\""+value+"\" class='"+mcp_cell+"' style='background-color:"+value+"'></div>");
 		});
 		$("#"+mcp_container).hide();
 
+		//Show the picker on fucus
 		$(el).focus(function(){
 			$("#"+mcp_container).show("slow");
 		});
+		
+		//Set the selected color
 		$("."+mcp_cell).click(function(){
 			$("#"+mcp_container).hide("slow");
-			$(el).val($(this).css('background-color'));
-			$(el).css('background-color',$(this).css('background-color'));
+			var selected_color = $(this).data("color");
+			$(el).val(selected_color);
+			$(el).css('background-color', selected_color);
 		});
 
 		//Styles
