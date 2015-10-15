@@ -47,27 +47,50 @@
 			var selected_color = $(this).data("color");
 			$(el).val(selected_color);
 			$(el).css('background-color', selected_color);
+			
+			if (options.callback) {//Run the call back function 
+				options.callback();
+			}
 		});
 
 		//Styles
 		var position = $(el).position();
-		$("#"+mcp_container).css({
-			"position" : "absolute",
-			"top" : position.top + $(el).height() + 10,
-			"left" : position.left,
-			//"width" : "100%",
-			//"height" : "100%",
-			"width" : "200px",
-			"height" : "200px",
-			"margin" : "auto",
-			"background" : "black",
-			"padding" : "5px"
-		});
-		$("."+mcp_cell).css({
-			"width" : "50px",
-			"height" : "50px",
-			"float" : "left",
-		});
+		
+		if (options.fullscreen) {
+			$("#"+mcp_container).css({
+				"position" : "absolute",
+				"top" : "0",
+				"left" : "0",
+				"width" : "100%",
+				"height" : "100%",
+				"margin" : "auto",
+				"background" : "black",
+				"padding" : "5px",
+				"z-index" : "2147483647"
+			});
+			$("."+mcp_cell).css({
+				"width" : "25%",
+				"height" : "25%",
+				"float" : "left"
+			});
+		} else {
+			$("#"+mcp_container).css({
+				"position" : "absolute",
+				"top" : position.top + $(el).height() + 10,
+				"left" : position.left,
+				"width" : "200px",
+				"height" : "200px",
+				"margin" : "auto",
+				"background" : "black",
+				"padding" : "5px",
+				"z-index" : "2147483647"
+			});
+			$("."+mcp_cell).css({
+				"width" : "50px",
+				"height" : "50px",
+				"float" : "left"
+			});
+		}
 	};
 
 }( jQuery ));

@@ -21,7 +21,12 @@
 		<script src="mcpicker.js"></script>
 		<script>
 			$(function() {
-				$("#mcp").mcpicker();
+				$("#mcp").mcpicker({
+					fullscreen: true,
+					callback: function() {
+						console.log('call back executed');
+					}
+				});
 			});
 		</script>
 	</body>
