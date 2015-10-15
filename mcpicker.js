@@ -65,7 +65,6 @@
 				"height" : "100%",
 				"margin" : "auto",
 				"background" : "black",
-				"padding" : "5px",
 				"z-index" : "2147483647"
 			});
 			$("."+mcp_cell).css({
