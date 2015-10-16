@@ -57,6 +57,9 @@
 		var position = $(el).position();
 		
 		if (options.fullscreen) {
+			
+			$(el).blur();//Unfocus the element 
+			
 			$("#"+mcp_container).css({
 				"position" : "absolute",
 				"top" : "0",
