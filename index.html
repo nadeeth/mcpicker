@@ -15,13 +15,20 @@
 	</head>
 	<body>
 		<div class="wrap">
-			Color <input type="text" id="mcp"/>
+			<label>Color Picker</label> <input type="text" id="mcp"/>
+			<br/>
+			<label>Color Picker Full Screen</label> <input type="text" id="mcp-full"/>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="mcpicker.js"></script>
 		<script>
 			$(function() {
 				$("#mcp").mcpicker({
+					callback: function() {
+						console.log('call back executed');
+					}
+				});
+				$("#mcp-full").mcpicker({
 					fullscreen: true,
 					callback: function() {
 						console.log('call back executed');
