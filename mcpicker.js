@@ -25,6 +25,7 @@
 			"#800080"//Purple
 		];
 		
+		/*
 		var colors = [
 			{ name:"lightsalmon", code:"#FFA07A"},
 			{ name:"salmon	", code:"#FA8072"},
@@ -165,7 +166,7 @@
 			{ name:"sienna	", code:"#A0522D"},
 			{ name:"brown	", code:"#A52A2A"},
 			{ name:"maroon	", code:"#800000"},
-		];
+		];*/
 
 		//Picker elements
 		var mcp_container = 'pcp_mobile_color_picker_container_' + $(el).prop('id');
