@@ -7,22 +7,22 @@
 		
 		//Colors
 		var colors = [
-			"#FFFFFF",//White	
-			"#C0C0C0",//Silver
-			"#808080",//Gray
-			"#000000",//Black
-			"#FF0000",//Red
-			"#800000",//Maroon
-			"#FFFF00",//Yellow
-			"#808000",//Olive
-			"#00FF00",//Lime
-			"#008000",//Green
-			"#00FFFF",//Aqua
-			"#008080",//Teal
-			"#0000FF",//Blue
-			"#000080",//Navy
-			"#FF00FF",//Fuchsia
-			"#800080"//Purple
+			{ name:"White", code:"#FFFFFF"},
+			{ name:"Silver", code:"#C0C0C0"},
+			{ name:"Gray", code:"#808080"},
+			{ name:"Black", code:"#000000"},
+			{ name:"Red", code:"#FF0000"},
+			{ name:"Maroon", code:"#800000"},
+			{ name:"Yellow", code:"#FFFF00"},
+			{ name:"Olive", code:"#808000"},
+			{ name:"Lime", code:"#00FF00"},
+			{ name:"Green", code:"#008000"},
+			{ name:"Aqua", code:"#00FFFF"},
+			{ name:"Teal", code:"#008080"},
+			{ name:"Blue", code:"#0000FF"},
+			{ name:"Navy", code:"#000080"},
+			{ name:"Fuchsia", code:"#FF00FF"},
+			{ name:"Purple", code:"#800080"}
 		];
 		
 		/*
