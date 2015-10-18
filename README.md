@@ -1,2 +1,2 @@
 # mcpicker
-A color picker for small screens.
+A simple color picker for mobiles and small screens.
